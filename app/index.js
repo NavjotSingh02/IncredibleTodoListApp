@@ -16,6 +16,7 @@ const App = () => {
 
   };
   return (
+    
     <SafeAreaView>
       <ToDoList tasks={tasks}/>
       <ToDoForm addTask={addTask} />
