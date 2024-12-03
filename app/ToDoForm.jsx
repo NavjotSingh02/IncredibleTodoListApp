@@ -17,7 +17,7 @@ function ToDoForm({ addTask }) {
         style={styles.input}
         placeholder="Add a new task..."
         value={task}
-        onChangeText={setTask}
+        onChangeText={(text) => setTask(text)}
       />
       <Button title="Add" onPress={handleAddTask} />
     </View>

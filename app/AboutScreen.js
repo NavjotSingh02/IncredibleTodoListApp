@@ -7,6 +7,9 @@ function AboutScreen({ navigation }) {
     <MainLayout>
       <View style={styles.container}>
         <Text>About Screen</Text>
+        <Text>App Name: IncredibleTodoList</Text>
+        <Text>Your Name: Navjot Singh</Text>
+        <Text>Date: {new Date().toLocaleDateString()}</Text>
         <Button
           title="Go to Home"
           onPress={() => navigation.navigate('Home')}

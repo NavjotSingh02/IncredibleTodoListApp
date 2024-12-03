@@ -28,6 +28,8 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "newArchEnabled": true
+
   }
 }

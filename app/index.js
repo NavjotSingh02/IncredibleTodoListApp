@@ -1,32 +1,16 @@
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './HomeScreen';
+import AboutScreen from './AboutScreen';
 
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
-import ToDoList from './ToDoList';
-import ToDoForm from './ToDoForm';
+const Stack = createStackNavigator();
 
-const App = () => {
-  const [tasks, setTasks] = useState([
-    'Do laundry',
-    'Go to gym',
-    'Walk dog'
-  ]);
-  const addTask = (task) => {
-    // Implement the logic to add a new task
-    setTasks([...tasks, task]);
 
-  };
+export default function Index() {
   return (
-    
-    <SafeAreaView>
-      <ToDoList tasks={tasks}/>
-      <ToDoForm addTask={addTask} />
-      
-    </SafeAreaView>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
+      </Stack.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-  // Styles can be removed from here as they are already defined in the respective components
-});
-
-export default App;
